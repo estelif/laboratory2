@@ -197,7 +197,6 @@ public class MyLinkedList<T> implements MyList<T> {
         return size;
     }
 
-    @Override
     public Iterator<T> iterator() {
         return null;
     }
