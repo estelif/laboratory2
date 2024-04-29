@@ -1,4 +1,10 @@
-import java.util.Iterator;
+
+/**
+ * This class represents a custom implementation of a stack data structure.
+ * It internally uses MyLinkedList for storing elements.
+ * The class provides methods for stack operations such as pushing, popping,
+ * getting the top element, checking if the stack is empty, and clearing the stack.
+ */
 
 public class MyStack<T> {
     private MyLinkedList<T> stack = new MyLinkedList<>();
