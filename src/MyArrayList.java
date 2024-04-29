@@ -1,3 +1,9 @@
+/**
+ * This class represents a custom implementation of a dynamic array-based list data structure called MyArrayList.
+ * It implements the MyList interface for generic lists.
+ * The class maintains a generic array to store elements and an integer to keep track of the number of elements in the list.
+ */
+
 import java.util.Iterator;
 
 class MyArrayList<T> implements MyList<T> {
