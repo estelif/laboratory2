@@ -1,11 +1,18 @@
+/**
+ * This class represents a custom implementation of a queue data structure.
+ * It internally uses MyArrayList for storing elements.
+ * The class provides methods for queue operations such as enqueue, dequeue,
+ * getting the front and back elements, checking if the queue is empty,
+ * getting the size of the queue, and clearing the queue.
+ */
 public class MyQueue<T extends Comparable<T>> {
-    MyArrayList<T> queue = new MyArrayList<>();  //MyArrayList
+    MyArrayList<T> queue = new MyArrayList<>();
     public MyQueue(){
-    }                            //my constructor
+    }
 
     public T front (){
         return queue.getFirst();
-    }                           //firs element from queue
+    }                           //first element from queue
 
     public T back(){
         return queue.getLast();
@@ -15,7 +22,7 @@ public class MyQueue<T extends Comparable<T>> {
         T item = queue.getFirst();
         queue.remove(0);
         return item;
-    }                           //removes 1st element and get it
+    }                           //removes first element and get it
 
     public void enqueue(T item){
         queue.add(item);
