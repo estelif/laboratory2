@@ -1,3 +1,10 @@
+/**
+ * This class demonstrates the implementation and usage of custom data structures
+ as MyArrayList, MyLinkedList, MyQueue, MyStack and MyMinHeap.
+ It initializes instances of these data structures, adds elements,
+ retrieves elements by index, removes elements, checks the size etc,
+ */
+
 import java.util.ArrayList;
 
 public class Main {
@@ -23,7 +30,24 @@ public class Main {
         System.out.println("Size of myArrayList after clear: " + myArrayList.size());
 
         MyLinkedList myLinkedList = new MyLinkedList<>();
-        
+        myLinkedList.add(4);
+        myLinkedList.add(1);
+        myLinkedList.add(3);
+        myLinkedList.add(7);
+        myLinkedList.add(6);
+        myLinkedList.add(5);
+
+
+        System.out.println("Value of index 2: " + myLinkedList.get(2));
+        System.out.println("Current size of a list:" + myLinkedList.size());
+        System.out.println("Values of index 0 before remove: " + myLinkedList.get(0));
+        myLinkedList.remove(0);
+        System.out.println("Value of index 0 after remove: " + myLinkedList.get(0));
+        System.out.println("Size of an list: " + myLinkedList.size());
+        System.out.println("Value of index 1 before remove: " + myLinkedList.get(1));
+        myLinkedList.remove(1);
+        System.out.println("Value of index 1 after remove: " + myLinkedList.get(1));
+        System.out.println("Current size of a list: " + myLinkedList.size());
 
         MyQueue<Integer> myQueue = new MyQueue<>();
 
@@ -44,27 +68,20 @@ public class Main {
         stack.push(1);
         stack.push(2);
         stack.push(3);
-        System.out.println("Top element: " + stack.top());
-        int popped = stack.pop();
-        System.out.println("Popped element: " + popped);
-        System.out.println("Empty or not " + stack.isEmpty());
-        stack.clear();
-        System.out.println("After clearing " + stack.isEmpty());
 
-        //MyMinHeap
-        MyMinHeap<Integer> minHeap = new MyMinHeap<>();
+        MyMinHeap<Integer> minheap = new MyMinHeap<>();
+        minheap.insert(10);
+        minheap.insert(5);
+        minheap.insert(15);
+        minheap.insert(3);
+        minheap.insert(7);
 
-        minHeap.insert(3);
-        minHeap.insert(2);
-        minHeap.insert(1);
-        minHeap.insert(5);
-        minHeap.insert(4);
+        System.out.println("Is the stack empty? " + stack.isEmpty()); //checks if its empty or not
+        System.out.println("Top one: " + stack.top()); //top element
 
-        System.out.println("Minimum element: " + minHeap.getMin());
-        System.out.println("Removed minimum element: " + minHeap.extractMin());
-        System.out.println("After 1st element, Minimum element: " + minHeap.getMin());
-        minHeap.insert(0);
-        System.out.println("After added, Minimum element: " + minHeap.getMin());
+        int min = minheap.extractMin();
+        System.out.println("Extracted minimum element from the heap: " + min);//min element from the heap
+        System.out.println("Size of the heap: " + minheap.size()); //prints size
+
     }
-
 }
