@@ -1,3 +1,8 @@
+/**
+ * 'MyList' interface defines a contract for a custom list data structure
+
+ */
+
 public interface MyList<T> extends Iterable<T> {
     void add(T item);
     void set(int index, T item);
