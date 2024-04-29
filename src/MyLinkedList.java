@@ -1,3 +1,10 @@
+
+/**
+ * This class represents a custom implementation of a doubly linked list data structure.
+ * It internally uses a nested static class MyNode to represent nodes in the list.
+ * The class provides methods for list operations such as adding, removing,
+ * getting elements by index, checking if an element exists, and clearing the list.
+ */
 import java.util.Iterator;
 
 public class MyLinkedList<T> implements MyList<T> {
